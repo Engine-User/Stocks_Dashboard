@@ -1,0 +1,261 @@
+/* Custom Styles for Stock Dashboard */
+
+/* Global Styles */
+body {
+    background-color: #1e1e2e;
+    color: #ffffff;
+    font-family: 'Graduate', sans-serif;
+}
+
+/* Sidebar Styling */
+.sidebar .sidebar-content {
+    background-color: #2e2e3e;
+    padding: 20px;
+    border-right: 1px solid #444;
+}
+
+.sidebar .sidebar-content h1,
+.sidebar .sidebar-content h2,
+.sidebar .sidebar-content h3,
+.sidebar .sidebar-content h4,
+.sidebar .sidebar-content h5,
+.sidebar .sidebar-content h6 {
+    color: #ffffff;
+}
+
+/* Header Styling */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #ffffff;
+}
+
+/* Metric Boxes */
+.metric {
+    background-color: #3c3c4e;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+.metric .metric-title {
+    color: #a9b1d6;
+    font-size: 14px;
+}
+
+.metric .metric-value {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* DataFrame Styling */
+.dataframe {
+    background-color: #2e2e3e;
+    color: #ffffff;
+}
+
+.dataframe table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.dataframe th,
+.dataframe td {
+    border: 1px solid #444;
+    padding: 8px;
+    text-align: center;
+}
+
+.dataframe th {
+    background-color: #3c3c4e;
+    color: #ffffff;
+}
+
+/* Tabs Styling */
+.stTabs [role="tablist"] {
+    background-color: #2e2e3e;
+    border-bottom: 1px solid #444;
+}
+
+.stTabs [role="tab"] {
+    color: #a9b1d6;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.stTabs [role="tab"][aria-selected="true"] {
+    background-color: #3c3c4e;
+    color: #ffffff;
+    border-radius: 4px 4px 0 0;
+}
+
+/* Button Styling */
+button,
+.stButton>button {
+    background-color: #ff4b4b !important;
+    color: white !important;
+    border-radius: 10px !important;
+    border: none !important;
+    box-shadow: 0px 0px 15px #ff4b4b;
+    transition: all 0.3s ease-in-out;
+    font-family: 'Graduate', sans-serif !important;
+}
+
+button:hover,
+.stButton>button:hover {
+    box-shadow: 0px 0px 25px 10px #ff4b4b;
+    transform: scale(1.05);
+}
+
+/* Title Block Styling */
+.title-block {
+    background-color: #ff4b4b;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 20px #ff4b4b;
+    text-align: center;
+    font-size: 24px;
+    transition: all 0.3s ease-in-out;
+    font-family: 'Graduate', sans-serif;
+}
+
+.title-block:hover {
+    box-shadow: 0px 0px 30px 10px #ff4b4b;
+    transform: scale(1.05);
+}
+
+/* Global Font Family */
+body,
+.sidebar-content,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.metric-title,
+.metric-value,
+.dataframe th,
+.dataframe td,
+.stButton>button,
+.title-block,
+.company-name-box,
+.glow-button {
+    font-family: 'Graduate', sans-serif !important;
+}
+
+/* Glow Effect for Buttons */
+button,
+.stButton>button {
+    position: relative;
+}
+
+button::before,
+.stButton>button::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: rgba(255, 75, 75, 0.7);
+    border-radius: 15px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+button:hover::before,
+.stButton>button:hover::before {
+    opacity: 1;
+}
+
+/* Glow Effect for Title Block */
+.title-block::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: rgba(255, 75, 75, 0.5);
+    border-radius: 15px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.title-block:hover::before {
+    opacity: 1;
+}
+
+/* Add Glowing Button Styling */
+
+.glow-button {
+    background-color: #ff4b4b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-family: 'Graduate', sans-serif;
+    margin: 4px 2px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px #ff4b4b, 0 0 20px #ff4b4b, 0 0 30px #ff4b4b;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.glow-button:hover {
+    box-shadow: 0 0 20px #ff4b4b, 0 0 30px #ff4b4b, 0 0 40px #ff4b4b;
+    transform: scale(1.05);
+}
+
+/* Style for Company Name Box */
+.company-name-box {
+    background-color: #ff4b4b;
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 20px #ff4b4b;
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    text-shadow: 2px 2px #ff4b4b;
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.company-name-box:hover {
+    box-shadow: 0px 0px 30px 10px #ff4b4b;
+    transform: scale(1.05);
+}
+
+/* Ensure Global Font Family */
+body,
+.sidebar-content,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.metric-title,
+.metric-value,
+.dataframe th,
+.dataframe td,
+.stButton>button,
+.title-block,
+.company-name-box,
+.glow-button {
+    font-family: 'Graduate', sans-serif !important;
+}
